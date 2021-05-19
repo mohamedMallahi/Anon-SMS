@@ -151,11 +151,11 @@ elif type == 0:
 		receiver = '+' + numbe
 		text = input("Enter Message to send : ")
 		
-		resp = requests.post(headers={'content-type':'application/json'}, 'https://textbelt.com/text', {
+		resp = requests.post('https://textbelt.com/text', {
 			'phone' : receiver,
 			'message' : text ,
 			'key' : 'textbelt'
-		})
+		}, headers={'content-type':'application/json'})
 		
 		# print(resp.json())
 		input('\n\n\nThank You For Using Anon-SMS\nAfter v1.45 There are Ads Enabled in this Tool.\nPress Enter To Continue to View An Ad.\n\nSubscribe The Channel And Like The Video.')

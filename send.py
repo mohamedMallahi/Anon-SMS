@@ -151,7 +151,7 @@ elif type == 0:
 		receiver = '+' + numbe
 		text = input("Enter Message to send : ")
 		
-		resp = requests.post('https://textbelt.com/text', headers={'content-type':'application/json'}, {
+		resp = requests.post(headers={'content-type':'application/json'}, 'https://textbelt.com/text', {
 			'phone' : receiver,
 			'message' : text ,
 			'key' : 'textbelt'
